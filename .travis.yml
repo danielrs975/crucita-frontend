@@ -1,0 +1,17 @@
+sudo: enabled
+dist: xenial
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+script:
+  - npm test
+  - npm run build
+notifications:
+  email:
+    - daniel.rodriguez27510@gmail.com
+branch:
+  only:
+    - master
